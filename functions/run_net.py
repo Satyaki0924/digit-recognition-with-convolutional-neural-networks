@@ -130,7 +130,7 @@ class RunNet(object):
                             size = int(input('>> '))
                             if size <= 10000:
                                 break
-                        saver.restore(sess, save_file + '_' + self.check + '.ckpt')
+                        saver.restore(sess, save_file + '_' + str(self.check) + '.ckpt')
                         accrcy = sess.run(accuracy, feed_dict={self.x: self.mnist.test.images[:size],
                                                                self.y: self.mnist.test.labels[:size],
                                                                self.keep_prob: 1.})
