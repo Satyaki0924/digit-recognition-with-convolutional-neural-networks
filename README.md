@@ -12,8 +12,16 @@ chmod -R 777 setup.sh
 This will set up the project enviornment for you. This must be run with administrator rights.
 After you set up the project, run:
 ```
-python3 run_me.py
+sudo python3 run_me.py
 ```
+##### OR 
+*** virtual enviornment will be setup through setup.sh ***
+```
+source venv/bin/activate
+pip install -r requirements.txt
+python run_me.py
+```
+
 ### The following images should guide you with the rest of the process
 
 
