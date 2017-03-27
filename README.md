@@ -46,5 +46,5 @@ python3 run_me.py
 ![Time](https://github.com/Satyaki0924/digit-recognition-with-convolutional-neural-networks/blob/master/res/Time1.png?raw=true "Time")
 
 
-####Author: Satyaki Sanyal
+#### Author: Satyaki Sanyal
 This project is strictly for educational purposes only.
