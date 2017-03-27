@@ -32,6 +32,8 @@ class Main(object):
         :return: None
         """
         while True:
+            print('*****Author: Satyaki Sanyal*****')
+            print('***This project must only be used for educational purpose***')
             print('\r>> Enter 1: to Train, '
                   '2: to Test, '
                   '3: to generate Graph, '
@@ -73,23 +75,26 @@ class Main(object):
                 pass
 
     def main(self):
-        while True:
-            self.get_values()
-            if self.program == 4:
-                break
-            if self.program == 3:
-                PlotGraph().plot()
-                break
-            arr = [1, 2]
-            if self.program in arr:
-                if self.program == 1:
-                    self.program = 'train'
-                elif self.program == 2:
-                    self.program = 'test'
-            if not self.checkpoint:
-                self.checkpoint = 1
-            RunNet(self.learning_rate, self.training_iters, self.batch_size,
-                   self.display_step, self.n_input, self.n_classes,
-                   self.dropout, self.program, self.checkpoint).run()
-            if self.program == 'train':
-                break
+        try:
+            while True:
+                self.get_values()
+                if self.program == 4:
+                    break
+                if self.program == 3:
+                    PlotGraph().plot()
+                    break
+                arr = [1, 2]
+                if self.program in arr:
+                    if self.program == 1:
+                        self.program = 'train'
+                    elif self.program == 2:
+                        self.program = 'test'
+                if not self.checkpoint:
+                    self.checkpoint = 1
+                RunNet(self.learning_rate, self.training_iters, self.batch_size,
+                       self.display_step, self.n_input, self.n_classes,
+                       self.dropout, self.program, self.checkpoint).run()
+                if self.program == 'train':
+                    break
+        except Exception as e:
+            print('***Error: ' + str(e) + '***')
